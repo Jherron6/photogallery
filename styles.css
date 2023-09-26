@@ -1,0 +1,272 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* End CSS Reset */
+html {
+    background-color: black;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    width: 485px;
+    margin: 0 auto;
+}
+.container > *{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+h1 {
+    display: grid;
+    justify-content: center;
+    background: white;
+    color: #007d7b;
+    width: 485px;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 7px 7px 0px;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 45px;
+}
+li {
+    display: inline-flex;
+    justify-content: center;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 40px 0px;
+    justify-content: space-between;
+    
+}
+[href="#top"]{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    margin: 0px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    padding: 5px;
+    font-weight: normal;
+}
+article {
+    background: white;
+}
+section {
+    display: grid;
+}
+h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-self: center;
+    margin: 15px 0px;
+}
+:is(nav, article, aside) > h2 {
+    display: none;
+}
+figure {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+p {
+    font-size: 1.25em;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+figcaption, label, input, small {
+    font-size: 1em;
+}
+img {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+figcaption {
+    text-transform: uppercase;
+    text-align: center;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 1;
+    margin: 1em 0px;
+}
+figure:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(7), :nth-of-type(12)) > figcaption {
+    color: white;
+}
+figure:is(:nth-of-type(1), :nth-of-type(3), :nth-of-type(6), :nth-of-type(7)) > figcaption {
+    display: grid;
+    align-content: end;
+}
+aside {
+    color: white;
+}
+h3 {
+    display: none;
+}
+#contact > p {
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+form {
+    display: grid;
+    justify-content: center;
+}
+form > input {
+    margin-bottom: 20px;
+    width: 400px;
+    height: 2em;
+}
+input[type="text"] {
+    padding: 0px;
+}
+label {
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+input::placeholder {
+    color:#007d7b;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+#submit {
+    background:#007d7b;
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-style: none;
+    height: 35px;
+    width: 230px;
+    justify-self: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+footer > p {
+    color: white;
+    justify-self: center;
+    margin: 15px 0px;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 880px) {
+    body {
+    width: 880px;
+    margin: 0 auto;
+    }
+    .container {
+        width: 880px;
+    }
+    h1 {
+        width: 100%;
+        justify-content: start;
+        padding-left: 10px;
+    }
+    ul {
+        justify-content: center;
+        padding: 0px;
+    }
+    li:not(:nth-child(4)){
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #contact > p {
+        justify-content: center;
+    }
+    form > input {
+        width: 750px;
+    }
+    #submit {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        width: 1300px;
+        margin: 0 auto;
+        }
+    .container {
+        width: 1300px;
+    }
+    h1 {
+        width: 100%;
+    }
+    nav {
+        display: flex;
+        justify-content: end;
+    }
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    form > input {
+        width: 1000px;
+    }
+    #submit {
+        width: 600px;
+    }
+}
